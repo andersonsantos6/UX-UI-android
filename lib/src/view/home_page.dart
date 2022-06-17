@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phone_portfolio/src/components/homePage/dateTime.dart';
 import 'package:phone_portfolio/src/components/homePage/drawer/drawer_apps.dart';
 import 'package:phone_portfolio/src/components/homePage/searchBar/search_bar.dart';
+import 'package:phone_portfolio/src/components/mavBar/navigation_bar.dart';
 import 'package:phone_portfolio/src/components/statusBar/status_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           Column(
-            children: const [
+            children: [
               StatusBar(),
               SizedBox(
                 height: 20,
@@ -28,6 +29,7 @@ class HomePage extends StatelessWidget {
               DateTimeNow(),
               DrawerApps(),
               SearchBar(),
+              CustomNavigationBar(),
             ],
           ),
         ]),

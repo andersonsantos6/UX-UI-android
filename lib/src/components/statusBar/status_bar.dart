@@ -13,50 +13,45 @@ class StatusBar extends StatelessWidget {
     return GestureDetector(
       onTapDown: (_) {},
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Text(
-                  "${dateTime.hour}:" +
-                      (dateTime.minute < 10
-                          ? "0${dateTime.minute}"
-                          : "${dateTime.minute}"),
-                  style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                Icon(
-                  Icons.phone,
-                  size: 18,
-                ),
-                SizedBox(
-                  width: 2,
-                ),
-                Icon(
-                  Icons.message,
-                  size: 18,
-                ),
-              ],
-            ),
-            Row(
-              children: const [
-                Icon(
-                  Icons.vibration,
-                  size: 18,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                Icon(Icons.wifi, size: 18),
-                Icon(Icons.perm_data_setting, size: 18),
-                Icon(Icons.battery_std_rounded, size: 18),
-              ],
-            ),
-          ],
+        color: Colors.black.withOpacity(0.5),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    "${dateTime.hour}:" +
+                        (dateTime.minute < 10
+                            ? "0${dateTime.minute}"
+                            : "${dateTime.minute}"),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Icon(Icons.phone, size: 18, color: Colors.white),
+                  SizedBox(
+                    width: 2,
+                  ),
+                  Icon(Icons.message, size: 18, color: Colors.white),
+                ],
+              ),
+              Row(
+                children: const [
+                  Icon(Icons.vibration, size: 18, color: Colors.white),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Icon(Icons.wifi, size: 18, color: Colors.white),
+                  Icon(Icons.perm_data_setting, size: 18, color: Colors.white),
+                  Icon(Icons.battery_std_rounded,
+                      size: 18, color: Colors.white),
+                ],
+              ),
+            ],
+          ),
         ),
         height: 30,
       ),

@@ -35,6 +35,9 @@ class DrawerApps extends StatelessWidget {
                   IconDrawer(
                       logo: 'lib/src/assets/drawerApps/Telegram_logo.svg.png',
                       url: 'https://t.me/andersonsantos6'),
+                  IconDrawer(
+                      logo: 'lib/src/assets/drawerApps/Telegram_logo.svg.png',
+                      url: '')
                 ],
               ),
             ),
